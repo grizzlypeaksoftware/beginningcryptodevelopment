@@ -1,11 +1,11 @@
-// SPDX-License-Identifier: MIT
-// pragma statement - indicates which version of the solidity compiler to use.
+// SPDX-License-Identifier: GPL-3.0
+// pragma statement - indicates which version of the solidity compiler to limit to.
 pragma solidity ^0.8.12;
 
 // create a contract called HelloWorld
 contract HelloWorld{
 
-    // data type bytpes32 is typicall used for string,
+    // data type bytpes32 is typically used for string,
     // string type is also available but bytes32 reserves less space.
     // blockchain storage is expensive, so we keep the contracts as lean as possible.
     bytes32 message;
