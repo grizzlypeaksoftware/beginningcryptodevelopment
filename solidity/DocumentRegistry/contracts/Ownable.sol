@@ -8,14 +8,16 @@
 // advanced ownership functions
 // 4) Ability to renounce a contract
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.12;
 
 // Ownable.sol = provides contract ownership functions
 abstract contract Ownable {
 
     address private _owner;
 
-    constructor() {
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
+    constructor() { 
         _owner = msg.sender;
     }
 
@@ -23,12 +25,19 @@ abstract contract Ownable {
         return _owner;
     }
 
-    modifier onlyOwner() {
-        require(owner() == msg.sender, "Ownership Assertion: Caller of the function is not the owner.");
-        _;
+    function transferOwnership(address newOwner) public virtual onlyOwner{
+        require(newOwner != address(0), "Ownable: new owner is the zero address");
+        _transferOwnership(newOwner);
     }
 
-    function transferOwnership(address newOwner) public virtual onlyOwner {
+    function _transferOwnership(address newOwner) internal virtual{
+         address oldOwner = _owner;
         _owner = newOwner;
+        emit OwnershipTransferred(oldOwner, newOwner);
+    }
+
+    modifier onlyOwner() {
+        require(owner() == msg.sender, "Ownership Assertion: Caller is not the owner.");
+        _;
     }
 }

@@ -12,4 +12,5 @@ The course documentation can be found at GrizzlyPeakSoftware.com
 * [Setting up your Crypto Development Environment](https://www.grizzlypeaksoftware.com/articles?id=947hoJYsqk86nRQku8szy)
 * [Writing your first Solidity Smart Contract for Ethereum](https://www.grizzlypeaksoftware.com/articles?id=7E3ZosPhuexZpXkYo7Eap7)
 * [Deploying Smart Contracts with Truffle and Ganache](https://www.grizzlypeaksoftware.com/articles?id=5vWBWo4Zpi02FSVCmQunxk)
+* [Creating an Ownable Smart Contract in Solidity for Ethereum](https://www.grizzlypeaksoftware.com/articles?id=6NvaOcWdWhwGEKbILwVUKr)
 
