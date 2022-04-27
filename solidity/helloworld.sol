@@ -5,7 +5,7 @@ pragma solidity ^0.8.12;
 // create a contract called HelloWorld
 contract HelloWorld{
 
-    // data type bytpes32 is typically used for string,
+    // data type bytes32 is typically used for string,
     // string type is also available but bytes32 reserves less space.
     // blockchain storage is expensive, so we keep the contracts as lean as possible.
     bytes32 message;
